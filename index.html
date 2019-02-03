@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Styles/loading.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+        
+    <script src="Scripts/AppScript.js"></script>
+
+<title>REST Client</title>
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Request: </legend>
+            <div class="form-group">
+                URL: <input class="form-control" type="text" placeholder="Enter Server URL" id="txtURL" />
+            </div>
+            <div class="form-group">
+                Method:
+                <select id="ComboMethods" class="form-control">
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="DELETE">DELETE</option>
+                    <option value="PATCH">PATCH</option>
+                    <option value="HEAD">HEAD</option>
+                    <option value="OPTIONS">OPTIONS</option>
+                </select>
+            </div>  
+            <div class="form-group">
+                Body:
+                <textarea id="txtBody" cols="40" rows="10" class="form-control"></textarea>                
+            </div>
+            <div class="progress" id="progressBar">
+                <div class="progress-bar progress-bar-striped active" role="progressbar"
+                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">Loading...                   
+                </div>
+            </div>
+            <div class="form-group">
+            Response:
+            <textarea id="txtResponse" cols="40" rows="10" class="form-control" readonly></textarea>
+            </div><br />
+            
+            <input id="btnSend" type="button" value="Send" class="btn btn-info" />            
+</fieldset>
+    </div>
+    <br />
+</body>
+</html>
